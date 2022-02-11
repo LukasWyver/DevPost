@@ -1,8 +1,9 @@
 import React from 'react';
 import {StatusBar} from 'react-native';
 import {ThemeProvider} from 'styled-components';
+import {NavigationContainer} from '@react-navigation/native';
 
-import Home from './src/pages/Home';
+import Routes from './src/routes';
 import theme from './src/styles/global/theme';
 
 export default function App() {
@@ -13,7 +14,9 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <Home />
+      <NavigationContainer>
+        <Routes />
+      </NavigationContainer>
     </ThemeProvider>
   );
 }
